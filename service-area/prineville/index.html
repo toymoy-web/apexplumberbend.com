@@ -134,7 +134,6 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 .herocall { background: rgb(255, 255, 255); border-radius: 16px; padding: 24px; text-align: center; min-width: 250px; box-shadow: var(--shadow-lg); }
 .herocall .lbl { color: var(--gray); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 .herocall .phone { font-family: var(--font-head); font-weight: 800; font-size: 24px; color: var(--coral-d); margin: 6px 0px 12px; display: block; }
-.site-footer { background: rgb(255, 255, 255); border-top: 1px solid var(--line); padding: 50px 0px 24px; font-size: 14px; }
 .sticky-cta { display: none; position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 8000; background: var(--cta); color: rgb(255, 255, 255); text-align: center; padding: 14px 16px; font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 20px; }
 .sticky-cta small { display: block; font-weight: 500; font-size: 12px; opacity: 0.9; }
 .float-call { position: fixed; right: 22px; bottom: 22px; width: 56px; height: 56px; border-radius: 50%; background: var(--cta); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: var(--shadow-lg); z-index: 7000; }
@@ -177,7 +176,6 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 }
 .post-meta { color: var(--gray); font-size: 14px; margin: 0px; }
 .post { padding-top: clamp(2rem, 4vw, 3rem); }
-.post-wrap { max-width: 780px; }
 .post-lead { font-size: 1.15rem; color: var(--ink); font-weight: 500; margin-bottom: 1.6rem; border-left: 4px solid var(--coral); padding-left: 18px; }
 .post h2 { margin: 2.2rem 0px 0.8rem; font-size: clamp(1.35rem, 2.6vw, 1.8rem); }
 .post p { margin-bottom: 1.05rem; }
@@ -195,6 +193,48 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 }
 .post-body { padding: clamp(1.4rem, 3vw, 2.4rem); }
 .post-body > h2:first-of-type { margin-top: 1.6rem; }
+.pagehead.has-hero, .hero.has-hero { position: relative; isolation: isolate; overflow: hidden; color: rgb(255, 255, 255); background: rgb(20, 33, 58); }
+.pagehead.has-hero { padding: 64px 0px; }
+.hero-bg { position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.pagehead.has-hero::before, .hero.has-hero::before { content: ""; position: absolute; inset: 0px; z-index: -1; background: linear-gradient(90deg, rgba(12, 19, 36, 0.9) 0%, rgba(12, 19, 36, 0.72) 52%, rgba(12, 19, 36, 0.5) 100%); }
+.pagehead.has-hero h1, .pagehead.has-hero p, .pagehead.has-hero .crumb, .hero.has-hero h1, .hero.has-hero .hero-sub { color: rgb(255, 255, 255); }
+.pagehead.has-hero .crumb a { color: rgb(255, 201, 184); }
+.pagehead.has-hero .zips-lbl { color: rgb(230, 234, 242); }
+.pagehead.has-hero .badge:not(.badge-alt), .hero.has-hero .badge { background: rgba(255, 255, 255, 0.16); color: rgb(255, 255, 255); }
+.hero.has-hero h1 span { color: rgb(255, 201, 184); }
+.hero.has-hero .ribbon, .hero.has-hero .ribbon2 { display: none; }
+.hero.has-hero .trustrow, .hero.has-hero .trustrow li { color: rgb(255, 255, 255); }
+.hero.has-hero .btn-ghost { background: rgb(255, 255, 255); }
+.pagehead.has-hero .herocall .lbl { color: var(--gray); }
+.pagehead.has-hero .herocall { color: var(--ink); }
+.pagehead.has-hero .herocall li { color: var(--ink); }
+@media (max-width: 900px) {
+  .pagehead.has-hero { padding: 44px 0px; }
+  .pagehead.has-hero::before, .hero.has-hero::before { background: linear-gradient(rgba(12, 19, 36, 0.86), rgba(12, 19, 36, 0.72)); }
+}
+main p + p { margin-top: 14px; }
+main h1 + p, main h2 + p, main h3 + p { margin-top: 0px; }
+main h2, main h3 { margin-bottom: 14px; }
+main p, main li { font-size: 1rem; line-height: 1.68; }
+.wrap { max-width: var(--container); margin: 0px auto; padding: 0px 24px; }
+.twocol { display: grid; grid-template-columns: minmax(0px, 1fr) 330px; gap: 44px; align-items: start; padding: clamp(2rem, 4vw, 3.4rem) 24px; }
+.twocol-main { min-width: 0px; }
+.twocol-main .blk { padding: 0px 0px clamp(2rem, 4vw, 3rem); }
+.twocol-main .panel-card { max-width: 100%; margin: 0px 0px 20px; padding: 28px 30px; box-shadow: none; }
+.twocol-main .post-body { padding: clamp(1.2rem, 3vw, 2rem); }
+.twocol-main .post-lead { margin-top: 0px; }
+.sidecard { position: sticky; top: 24px; align-self: start; background: rgb(255, 255, 255); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: var(--shadow-lg); }
+.sidecard .sc-kick { display: inline-block; background: var(--storm-d); color: rgb(255, 255, 255); font-weight: 700; font-size: 12px; letter-spacing: 0.04em; padding: 6px 12px; border-radius: 100px; margin-bottom: 12px; }
+.sidecard h3 { font-size: 1.15rem; margin: 0px 0px 8px; }
+.sidecard > p { color: var(--gray); font-size: 0.95rem; margin: 0px 0px 14px; }
+.sidecard .btn { display: block; text-align: center; margin-bottom: 16px; }
+.sidecard ul { list-style: none; margin: 0px 0px 14px; padding: 0px; }
+.sidecard li { position: relative; padding: 6px 0px 6px 24px; font-size: 0.92rem; border-top: 1px solid var(--line); }
+.sidecard li::before { content: "✓"; position: absolute; left: 0px; top: 6px; color: var(--coral-d); font-weight: 800; }
+@media (max-width: 900px) {
+  .twocol { grid-template-columns: 1fr; gap: 24px; padding: 28px 16px; }
+  .sidecard { position: static; top: auto; }
+}
 </style>
 <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
@@ -259,7 +299,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 <div class="mob-overlay" id="mob-overlay" aria-hidden="true"></div>
 <main id="main-content">
 
-<section class="pagehead">
+<section class="pagehead has-hero">
+  <img class="hero-bg" src="/img/area-prineville-or-plumber.webp" alt="Emergency plumber serving Prineville, OR 97754: downtown Prineville in Crook County" width="1200" height="675" fetchpriority="high" decoding="async">
   <div class="container pagehead-inner">
     <div>
       <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/service-area/">Service Areas</a> &rsaquo; Prineville</nav>
@@ -271,10 +312,11 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
     <div class="herocall"><div class="lbl">24/7 emergency line</div><span class="phone">(503) 974-3329</span><a class="btn" href="tel:15039743329">Call now</a><ul class="callpoints"><li>24/7 emergency line for Crook County</li><li>City water side or your side? We help sort it out</li></ul></div>
   </div>
 </section>
-<div class="container page-figure"><figure><img src="/img/area-prineville-or-plumber.webp" alt="Emergency plumber serving Prineville, OR 97754: downtown Prineville in Crook County" width="1200" height="675" fetchpriority="high" decoding="async"></figure></div>
+<div class="wrap twocol">
+<article class="twocol-main">
 
-<section class="sec">
-  <div class="container narrow">
+<section class="blk">
+  <div>
     <span class="kick">City utilities</span>
     <h2>A county seat with its own city water and sewer department</h2>
     
@@ -290,8 +332,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec soft">
-  <div class="container">
+<section class="blk soft">
+  <div>
     <span class="kick">By setup</span>
     <h2>What each Prineville setup tends to need</h2>
     
@@ -307,8 +349,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec">
-  <div class="container narrow">
+<section class="blk">
+  <div>
     <span class="kick">Reaching Prineville</span>
     <h2>A county seat with a longer drive from Bend</h2>
     
@@ -324,8 +366,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec soft">
-  <div class="container narrow">
+<section class="blk soft">
+  <div>
     <span class="kick">Which side of the meter</span>
     <h2>Who fixes what in a Prineville leak</h2>
     
@@ -341,8 +383,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec">
-  <div class="container narrow">
+<section class="blk">
+  <div>
     <span class="kick">Before we arrive</span>
     <h2>Before we arrive in Prineville: if you have a burst pipe or an active leak</h2>
     <p class="lede">Most Prineville emergencies start at a drain, a heater or a supply line, so these steps begin with the main valve.</p>
@@ -358,8 +400,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec">
-  <div class="container">
+<section class="blk">
+  <div>
     <span class="kick">Price</span>
     <h2>What changes the price of a Prineville plumbing call</h2>
     
@@ -377,8 +419,8 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-<section class="sec soft">
-  <div class="container narrow">
+<section class="blk soft">
+  <div>
     <span class="kick">Services Prineville calls for</span>
     <h2>The repairs behind most Prineville calls</h2>
     
@@ -394,6 +436,21 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
+</article>
+<aside class="sidecard" aria-label="Call a plumber now">
+  <span class="sc-kick">24/7 Emergency Line Open</span>
+  <h3>Emergency plumber in Prineville?</h3>
+  <p>Call now and dispatch tells you what to shut off while a plumber is sent to Prineville.</p>
+  <a class="btn" href="tel:15039743329">Call (503) 974-3329</a>
+  <ul>
+    <li>Price given before work begins</li>
+    <li>Licensed Oregon contractors</li>
+    <li>Same-day dispatch when available</li>
+    <li>Bend and Deschutes County</li>
+  </ul>
+  <a class="sc-link" href="/burst-pipe-repair/">Emergency burst pipe repair &rsaquo;</a>
+</aside>
+</div>
 <section class="sec soft"><div class="container"><span class="kick">Questions</span><h2>Plumbing questions in Prineville</h2><div class="faq-list">
 <div class="faq-item"><button class="faq-q" type="button">Is emergency service available in Prineville?</button><div class="faq-answer"><p>Yes. The line answers 24 hours a day, every day of the year, for Prineville and the rest of Crook County. Dispatch tells you the arrival window for the drive from Bend when you call.</p></div></div>
 <div class="faq-item"><button class="faq-q" type="button">Do you cover every ZIP code in Prineville?</button><div class="faq-answer"><p>Prineville uses 97754, which reaches from the downtown streets out to the rural roads of Crook County. Nearby, we also take calls in 97753 around Powell Butte and 97756 in Redmond on the way in. If an address sits outside the city, give dispatch the road name, since a county address can carry a Prineville mailing code.</p></div></div>

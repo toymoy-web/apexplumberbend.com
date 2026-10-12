@@ -280,3 +280,55 @@ figure{margin:0}
 @media(prefers-reduced-motion:reduce){.btn,.dropdown,.hamburger span,.mob-drawer,.mob-overlay,.card,.faq-answer,.rel a{transition:none}}
 .post-body{padding:clamp(1.4rem,3vw,2.4rem)}
 .post-body>h2:first-of-type{margin-top:1.6rem}
+
+/* ---- v11: hero backgrounds ---- */
+.pagehead.has-hero,.hero.has-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:#14213a}
+.pagehead.has-hero{padding:64px 0}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.pagehead.has-hero::before,.hero.has-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,19,36,.9) 0%,rgba(12,19,36,.72) 52%,rgba(12,19,36,.5) 100%)}
+.pagehead.has-hero h1,.pagehead.has-hero p,.pagehead.has-hero .crumb,.hero.has-hero h1,.hero.has-hero .hero-sub{color:#fff}
+.pagehead.has-hero .crumb a{color:#FFC9B8}
+.pagehead.has-hero .zips-lbl{color:#E6EAF2}
+.pagehead.has-hero .badge:not(.badge-alt),.hero.has-hero .badge{background:rgba(255,255,255,.16);color:#fff}
+.hero.has-hero h1 span{color:#FFC9B8}
+.hero.has-hero .ribbon,.hero.has-hero .ribbon2{display:none}
+.hero.has-hero .trustrow,.hero.has-hero .trustrow li{color:#fff}
+.hero.has-hero .btn-ghost{background:#fff}
+.pagehead.has-hero .herocall .lbl{color:var(--gray)}
+.pagehead.has-hero .herocall{color:var(--ink)}
+.pagehead.has-hero .herocall li{color:var(--ink)}
+@media(max-width:900px){.pagehead.has-hero{padding:44px 0}.pagehead.has-hero::before,.hero.has-hero::before{background:linear-gradient(180deg,rgba(12,19,36,.86),rgba(12,19,36,.72))}}
+/* ---- v11: paragraph rhythm ---- */
+main p+p{margin-top:14px}
+main h1+p,main h2+p,main h3+p{margin-top:0}
+main h2,main h3{margin-bottom:14px}
+main p,main li{font-size:1rem;line-height:1.68}
+/* ---- v11: two column layout with sticky sidecard ---- */
+.wrap{max-width:var(--container);margin:0 auto;padding:0 24px}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:44px;align-items:start;padding:clamp(2rem,4vw,3.4rem) 24px}
+.twocol-main{min-width:0}
+.twocol-main .blk{padding:0 0 clamp(2rem,4vw,3rem)}
+.twocol-main .blk.soft{background:var(--soft);border-radius:20px;padding:clamp(1.4rem,3vw,2.2rem);margin-bottom:clamp(2rem,4vw,3rem)}
+.twocol-main .panel-card{max-width:100%;margin:0 0 20px;padding:28px 30px;box-shadow:none}
+.twocol-main .blk.soft .panel-card{box-shadow:none}
+.twocol-main .callout-card,.twocol-main .insight-card,.twocol-main .prep-card{max-width:100%}
+.twocol-main .steps{grid-template-columns:1fr 1fr;row-gap:24px}
+.twocol-main .steps::before{display:none}
+.twocol-main .factors{grid-template-columns:1fr 1fr}
+.twocol-main .prepgrid{grid-template-columns:1fr 1fr}
+.twocol-main .post-body{padding:clamp(1.2rem,3vw,2rem)}
+.twocol-main .post-lead{margin-top:0}
+.sidecard{position:sticky;top:24px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow-lg)}
+.sidecard .sc-kick{display:inline-block;background:var(--storm-d);color:#fff;font-weight:700;font-size:12px;letter-spacing:.04em;padding:6px 12px;border-radius:100px;margin-bottom:12px}
+.sidecard h3{font-size:1.15rem;margin:0 0 8px}
+.sidecard>p{color:var(--gray);font-size:.95rem;margin:0 0 14px}
+.sidecard .btn{display:block;text-align:center;margin-bottom:16px}
+.sidecard ul{list-style:none;margin:0 0 14px;padding:0}
+.sidecard li{position:relative;padding:6px 0 6px 24px;font-size:.92rem;border-top:1px solid var(--line)}
+.sidecard li::before{content:"\2713";position:absolute;left:0;top:6px;color:var(--coral-d);font-weight:800}
+.sidecard .sc-link{display:block;font-weight:700;color:var(--coral-d);text-decoration:none;font-size:.95rem}
+.sidecard .sc-link:hover{text-decoration:underline}
+@media(max-width:900px){.twocol{grid-template-columns:1fr;gap:24px;padding:28px 16px}.sidecard{position:static;top:auto}.twocol-main .steps,.twocol-main .factors,.twocol-main .prepgrid{grid-template-columns:1fr}}
+.localnote{background:var(--soft);border-left:4px solid var(--storm-d);border-radius:12px;padding:20px 22px;margin:1.6rem 0}
+.localnote h2{margin-top:0;font-size:1.25rem}
+.localnote p{margin-bottom:0}

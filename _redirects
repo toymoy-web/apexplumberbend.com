@@ -1,1 +1,13 @@
-# No redirects needed. Cloudflare Pages resolves slug/index.html natively.
+# Blog slugs renamed to include the city. 301s for both slash forms.
+/blog/well-pump-not-building-pressure/ /blog/well-pump-not-building-pressure-bend-oregon/ 301
+/blog/well-pump-not-building-pressure /blog/well-pump-not-building-pressure-bend-oregon/ 301
+/blog/check-oregon-plumber-license/ /blog/check-bend-oregon-plumber-license/ 301
+/blog/check-oregon-plumber-license /blog/check-bend-oregon-plumber-license/ 301
+/blog/heat-pump-water-heater-oregon/ /blog/heat-pump-water-heater-bend-oregon/ 301
+/blog/heat-pump-water-heater-oregon /blog/heat-pump-water-heater-bend-oregon/ 301
+/blog/hydro-jetting-vs-snaking-drain/ /blog/hydro-jetting-vs-snaking-drain-bend/ 301
+/blog/hydro-jetting-vs-snaking-drain /blog/hydro-jetting-vs-snaking-drain-bend/ 301
+/blog/garbage-disposal-jammed-or-leaking/ /blog/garbage-disposal-jammed-or-leaking-bend/ 301
+/blog/garbage-disposal-jammed-or-leaking /blog/garbage-disposal-jammed-or-leaking-bend/ 301
+/blog/plumbing-emergency-what-to-shut-off-first/ /blog/bend-plumbing-emergency-what-to-shut-off-first/ 301
+/blog/plumbing-emergency-what-to-shut-off-first /blog/bend-plumbing-emergency-what-to-shut-off-first/ 301

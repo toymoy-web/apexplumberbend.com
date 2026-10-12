@@ -134,7 +134,6 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 .herocall { background: rgb(255, 255, 255); border-radius: 16px; padding: 24px; text-align: center; min-width: 250px; box-shadow: var(--shadow-lg); }
 .herocall .lbl { color: var(--gray); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 .herocall .phone { font-family: var(--font-head); font-weight: 800; font-size: 24px; color: var(--coral-d); margin: 6px 0px 12px; display: block; }
-.site-footer { background: rgb(255, 255, 255); border-top: 1px solid var(--line); padding: 50px 0px 24px; font-size: 14px; }
 .sticky-cta { display: none; position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 8000; background: var(--cta); color: rgb(255, 255, 255); text-align: center; padding: 14px 16px; font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px -6px 20px; }
 .sticky-cta small { display: block; font-weight: 500; font-size: 12px; opacity: 0.9; }
 .float-call { position: fixed; right: 22px; bottom: 22px; width: 56px; height: 56px; border-radius: 50%; background: var(--cta); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: var(--shadow-lg); z-index: 7000; }
@@ -177,7 +176,6 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 }
 .post-meta { color: var(--gray); font-size: 14px; margin: 0px; }
 .post { padding-top: clamp(2rem, 4vw, 3rem); }
-.post-wrap { max-width: 780px; }
 .post-lead { font-size: 1.15rem; color: var(--ink); font-weight: 500; margin-bottom: 1.6rem; border-left: 4px solid var(--coral); padding-left: 18px; }
 .post h2 { margin: 2.2rem 0px 0.8rem; font-size: clamp(1.35rem, 2.6vw, 1.8rem); }
 .post p { margin-bottom: 1.05rem; }
@@ -195,6 +193,48 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 }
 .post-body { padding: clamp(1.4rem, 3vw, 2.4rem); }
 .post-body > h2:first-of-type { margin-top: 1.6rem; }
+.pagehead.has-hero, .hero.has-hero { position: relative; isolation: isolate; overflow: hidden; color: rgb(255, 255, 255); background: rgb(20, 33, 58); }
+.pagehead.has-hero { padding: 64px 0px; }
+.hero-bg { position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.pagehead.has-hero::before, .hero.has-hero::before { content: ""; position: absolute; inset: 0px; z-index: -1; background: linear-gradient(90deg, rgba(12, 19, 36, 0.9) 0%, rgba(12, 19, 36, 0.72) 52%, rgba(12, 19, 36, 0.5) 100%); }
+.pagehead.has-hero h1, .pagehead.has-hero p, .pagehead.has-hero .crumb, .hero.has-hero h1, .hero.has-hero .hero-sub { color: rgb(255, 255, 255); }
+.pagehead.has-hero .crumb a { color: rgb(255, 201, 184); }
+.pagehead.has-hero .zips-lbl { color: rgb(230, 234, 242); }
+.pagehead.has-hero .badge:not(.badge-alt), .hero.has-hero .badge { background: rgba(255, 255, 255, 0.16); color: rgb(255, 255, 255); }
+.hero.has-hero h1 span { color: rgb(255, 201, 184); }
+.hero.has-hero .ribbon, .hero.has-hero .ribbon2 { display: none; }
+.hero.has-hero .trustrow, .hero.has-hero .trustrow li { color: rgb(255, 255, 255); }
+.hero.has-hero .btn-ghost { background: rgb(255, 255, 255); }
+.pagehead.has-hero .herocall .lbl { color: var(--gray); }
+.pagehead.has-hero .herocall { color: var(--ink); }
+.pagehead.has-hero .herocall li { color: var(--ink); }
+@media (max-width: 900px) {
+  .pagehead.has-hero { padding: 44px 0px; }
+  .pagehead.has-hero::before, .hero.has-hero::before { background: linear-gradient(rgba(12, 19, 36, 0.86), rgba(12, 19, 36, 0.72)); }
+}
+main p + p { margin-top: 14px; }
+main h1 + p, main h2 + p, main h3 + p { margin-top: 0px; }
+main h2, main h3 { margin-bottom: 14px; }
+main p, main li { font-size: 1rem; line-height: 1.68; }
+.wrap { max-width: var(--container); margin: 0px auto; padding: 0px 24px; }
+.twocol { display: grid; grid-template-columns: minmax(0px, 1fr) 330px; gap: 44px; align-items: start; padding: clamp(2rem, 4vw, 3.4rem) 24px; }
+.twocol-main { min-width: 0px; }
+.twocol-main .blk { padding: 0px 0px clamp(2rem, 4vw, 3rem); }
+.twocol-main .panel-card { max-width: 100%; margin: 0px 0px 20px; padding: 28px 30px; box-shadow: none; }
+.twocol-main .post-body { padding: clamp(1.2rem, 3vw, 2rem); }
+.twocol-main .post-lead { margin-top: 0px; }
+.sidecard { position: sticky; top: 24px; align-self: start; background: rgb(255, 255, 255); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: var(--shadow-lg); }
+.sidecard .sc-kick { display: inline-block; background: var(--storm-d); color: rgb(255, 255, 255); font-weight: 700; font-size: 12px; letter-spacing: 0.04em; padding: 6px 12px; border-radius: 100px; margin-bottom: 12px; }
+.sidecard h3 { font-size: 1.15rem; margin: 0px 0px 8px; }
+.sidecard > p { color: var(--gray); font-size: 0.95rem; margin: 0px 0px 14px; }
+.sidecard .btn { display: block; text-align: center; margin-bottom: 16px; }
+.sidecard ul { list-style: none; margin: 0px 0px 14px; padding: 0px; }
+.sidecard li { position: relative; padding: 6px 0px 6px 24px; font-size: 0.92rem; border-top: 1px solid var(--line); }
+.sidecard li::before { content: "✓"; position: absolute; left: 0px; top: 6px; color: var(--coral-d); font-weight: 800; }
+@media (max-width: 900px) {
+  .twocol { grid-template-columns: 1fr; gap: 24px; padding: 28px 16px; }
+  .sidecard { position: static; top: auto; }
+}
 </style>
 <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
@@ -260,6 +300,7 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
 <main id="main-content">
 
 <section class="pagehead">
+  
   <div class="container pagehead-inner">
     <div>
       <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; Blog</nav>
@@ -270,7 +311,6 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
   </div>
 </section>
 
-
 <section class="sec">
   <div class="container">
     <span class="kick">Plumbing guides for Central Oregon</span>
@@ -278,7 +318,7 @@ header[role="banner"] { position: sticky; top: 0px; z-index: 100; background: rg
     <div class="panel-card"><p>These guides cover the questions Bend and Central Oregon homeowners ask most, from frozen pipes to well pumps. Each one links to the repair pages for the problem it describes, so you can go from understanding the issue to getting it fixed.</p><p>The posts are written for Deschutes County conditions, including cold snaps, private wells and the mix of city and Avion water service. They are general information and do not replace a plumber's inspection. Where a guide mentions code, it refers to the Oregon Plumbing Specialty Code, which builds on the Uniform Plumbing Code (UPC).</p></div>
     
     
-    <div class="rel"><a href="/blog/frozen-pipes-bend-oregon/"><b>Frozen Pipes in Bend, OR: How to Thaw Them and Stop a Repeat</b><span>How to thaw a frozen line safely, what a burst looks like, and what to change so it does not happen again.</span></a><a href="/blog/bend-oregon-water-hardness/"><b>Bend Water Hardness: City Water vs. Well Water in Central Oregon</b><span>What the City of Bend reports about its water, how it differs on a private well, and when a softener makes sense.</span></a><a href="/blog/well-pump-not-building-pressure/"><b>Well Pump Not Building Pressure: Pump, Switch or Tank</b><span>A step by step look at pump, pressure switch and pressure tank faults that leave a well house short of water.</span></a><a href="/blog/la-pine-sunriver-well-nitrate/"><b>Nitrates in La Pine and Sunriver Wells: What Plumbing Can and Can&#39;t Fix</b><span>What nitrate in south county wells means, and where a plumber&#39;s work ends and a treatment decision begins.</span></a><a href="/blog/check-oregon-plumber-license/"><b>How to Check an Oregon Plumber&#39;s CCB and BCD License</b><span>Where to look up a contractor&#39;s licenses in Oregon and which numbers to ask for.</span></a><a href="/blog/heat-pump-water-heater-oregon/"><b>Heat Pump Water Heaters in Central Oregon: Cost, Fit and Incentives</b><span>How heat pump water heaters fit Central Oregon garages and basements, plus how utility incentives work.</span></a><a href="/blog/winterize-hose-bibs-bend/"><b>How to Winterize Hose Bibs and Frost-Free Spigots in Bend</b><span>A short fall checklist for hose bibs, vacuum breakers and frost-free spigots.</span></a><a href="/blog/winterize-sunriver-sisters-second-home/"><b>Winterizing a Sunriver or Sisters Second Home: A Drain-Down Checklist</b><span>A drain-down checklist for houses that sit empty through a Central Oregon winter.</span></a><a href="/blog/bend-sewer-line-roots-cleanout/"><b>Sewer Line Roots and Cleanouts in Older Bend Neighborhoods</b><span>Why tree roots find older sewer laterals and what a cleanout tells you.</span></a><a href="/blog/septic-or-sewer-who-to-call-bend/"><b>Septic or Sewer Near Bend: Who to Call for Each Problem</b><span>How to tell whether a smell, a backup or a slow drain is a septic matter or a plumbing one.</span></a><a href="/blog/low-water-pressure-bend-home/"><b>Low Water Pressure in a Bend Home: Regulator, Valve or Leak</b><span>How to trace weak flow to the pressure regulator, a partly closed valve or a leak.</span></a><a href="/blog/hydro-jetting-vs-snaking-drain/"><b>Hydro Jetting vs. Snaking a Drain: Which One Fits Your Clog</b><span>When a cable machine is enough and when high-pressure water is the better tool.</span></a><a href="/blog/garbage-disposal-jammed-or-leaking/"><b>Garbage Disposal Jammed or Leaking: What to Check Before You Call</b><span>What a humming, jammed or leaking disposal usually means and what is safe to try.</span></a><a href="/blog/plumbing-emergency-what-to-shut-off-first/"><b>Plumbing Emergency in Bend: What to Shut Off First</b><span>The order of valves to close and what to photograph when water is moving in the wrong place.</span></a><a href="/blog/tankless-water-heater-bend-altitude/"><b>Tankless Water Heaters in Bend: Altitude, Gas Supply and Sizing</b><span>How elevation, gas supply and sizing affect on-demand water heaters in Bend.</span></a></div>
+    <div class="rel"><a href="/blog/frozen-pipes-bend-oregon/"><b>Frozen Pipes in Bend, OR: How to Thaw Them and Stop a Repeat</b><span>How to thaw a frozen line safely, what a burst looks like, and what to change so it does not happen again.</span></a><a href="/blog/bend-oregon-water-hardness/"><b>Bend Water Hardness: City Water vs. Well Water in Central Oregon</b><span>What the City of Bend reports about its water, how it differs on a private well, and when a softener makes sense.</span></a><a href="/blog/well-pump-not-building-pressure-bend-oregon/"><b>Well Pump Not Building Pressure: Pump, Switch or Tank</b><span>A step by step look at pump, pressure switch and pressure tank faults that leave a well house short of water.</span></a><a href="/blog/la-pine-sunriver-well-nitrate/"><b>Nitrates in La Pine and Sunriver Wells: What Plumbing Can and Can&#39;t Fix</b><span>What nitrate in south county wells means, and where a plumber&#39;s work ends and a treatment decision begins.</span></a><a href="/blog/check-bend-oregon-plumber-license/"><b>How to Check an Oregon Plumber&#39;s CCB and BCD License</b><span>Where to look up a contractor&#39;s licenses in Oregon and which numbers to ask for.</span></a><a href="/blog/heat-pump-water-heater-bend-oregon/"><b>Heat Pump Water Heaters in Central Oregon: Cost, Fit and Incentives</b><span>How heat pump water heaters fit Central Oregon garages and basements, plus how utility incentives work.</span></a><a href="/blog/winterize-hose-bibs-bend/"><b>How to Winterize Hose Bibs and Frost-Free Spigots in Bend</b><span>A short fall checklist for hose bibs, vacuum breakers and frost-free spigots.</span></a><a href="/blog/winterize-sunriver-sisters-second-home/"><b>Winterizing a Sunriver or Sisters Second Home: A Drain-Down Checklist</b><span>A drain-down checklist for houses that sit empty through a Central Oregon winter.</span></a><a href="/blog/bend-sewer-line-roots-cleanout/"><b>Sewer Line Roots and Cleanouts in Older Bend Neighborhoods</b><span>Why tree roots find older sewer laterals and what a cleanout tells you.</span></a><a href="/blog/septic-or-sewer-who-to-call-bend/"><b>Septic or Sewer Near Bend: Who to Call for Each Problem</b><span>How to tell whether a smell, a backup or a slow drain is a septic matter or a plumbing one.</span></a><a href="/blog/low-water-pressure-bend-home/"><b>Low Water Pressure in a Bend Home: Regulator, Valve or Leak</b><span>How to trace weak flow to the pressure regulator, a partly closed valve or a leak.</span></a><a href="/blog/hydro-jetting-vs-snaking-drain-bend/"><b>Hydro Jetting vs. Snaking a Drain: Which One Fits Your Clog</b><span>When a cable machine is enough and when high-pressure water is the better tool.</span></a><a href="/blog/garbage-disposal-jammed-or-leaking-bend/"><b>Garbage Disposal Jammed or Leaking: What to Check Before You Call</b><span>What a humming, jammed or leaking disposal usually means and what is safe to try.</span></a><a href="/blog/bend-plumbing-emergency-what-to-shut-off-first/"><b>Plumbing Emergency in Bend: What to Shut Off First</b><span>The order of valves to close and what to photograph when water is moving in the wrong place.</span></a><a href="/blog/tankless-water-heater-bend-altitude/"><b>Tankless Water Heaters in Bend: Altitude, Gas Supply and Sizing</b><span>How elevation, gas supply and sizing affect on-demand water heaters in Bend.</span></a></div>
     
     
     
